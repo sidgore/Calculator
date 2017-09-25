@@ -11,9 +11,13 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 console.log('Welcome to node');
 
-app.listen(3000 ,()=> {
-    console.log('listening on 3000');
-  });
+//app.listen(3000 ,()=> {
+  //  console.log('listening on 3000');
+  //});
+
+  var port =  process.env.OPENSHIFT_NODEJS_PORT || 8080;   // Port 8080 if you run locally
+  var address =  process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1"; // Listening to localhost if you run locally
+  app.listen(port, address);
 
   app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
