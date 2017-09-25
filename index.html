@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .bg-1 { 
+             background-color: #D65518; /* Green */
+              color: #3A3232;
+          }
+          .bg-2 { 
+             background-color: #62D1BB; /* Green */
+              color: #ffffff;
+          }
+        </style>  
+</head>
+<body>
+    
+    <div class="container-fluid bg-1 text-center">
+      <h3>Calculator</h3>
+      <p> <em>Welcome to the Calculator World!</em></p>
+      <p>Come...Play with numbers...</p>
+    
+
+    </div>
+    <div class="container-fluid bg-1 text-center">
+  
+
+
+    <form class="jumbotron" action="/addition" method="post">
+
+        <div class="form-group">
+      <label for="input1">Enter First Number:</label>
+        <input type="text" placeholder="number" class="form-control" id="input1" name="input1"><br>
+
+
+        </div>
+
+        <div class="form-group">
+                <label for="input2">Enter Second Number:</label>
+                  <input type="text" placeholder="number" class="form-control" id="input2" name="input2"><br>
+          
+          
+                  </div>
+
+        
+        <button class="btn btn-success" type="submit">Addition</button>
+        <button class="btn btn-success" type="submit" formaction="/subtraction">Subtraction</button>
+        <button class="btn btn-success" type="submit" formaction="/multiplication">Multiplication</button>
+        <button class="btn btn-success" type="submit" formaction="/division">Division</button>
+      </form>
+
+
+    </div>
+
+    <div class="container-fluid bg-1 text-center">
+            
+            <button class="btn .btn-danger" type="submit">Result</button>
+                               
+                  
+            
+                </div>
+    </body>
+</html>
