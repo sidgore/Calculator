@@ -11,9 +11,21 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 console.log('Welcome to node');
 
-app.listen(3000 ,()=> {
-    console.log('listening on 3000');
-  });
+//app.listen(8080 ,()=> {
+  //  console.log('listening on 8080');
+  //});
+
+
+
+
+    // [START server]
+    // Start the server
+   app.listen(process.env.PORT || 8080, () => {
+      const port = server.address().port;
+      console.log(`App listening on port ${port}`);
+    });
+    // [END server]
+
 
   app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
@@ -25,7 +37,7 @@ app.listen(3000 ,()=> {
   app.post('/addition', (req, res) => {
     console.log(req.body.input1);
     console.log(req.body.input2);
-    
+
 
     var a = parseInt(req.body.input1);
     var b = parseInt(req.body.input2) ;
