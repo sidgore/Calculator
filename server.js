@@ -20,10 +20,9 @@ console.log('Welcome to node');
 
     // [START server]
     // Start the server
-   app.listen(process.env.PORT || 8080, () => {
-      const port = server.address().port;
-      console.log(`App listening on port ${port}`);
-    });
+    var port = process.env.port || 8080;
+    
+   app.listen(port);
     // [END server]
 
 
